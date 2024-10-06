@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Path Guidance Survey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Career Path Guidance Survey</h1>
+        <form id="survey-form" action="#" method="post">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age" required>
+
+            <label for="grade">What grade are you currently in?</label>
+            <input type="number" id="grade" name="grade" placeholder="Enter your grade" required>
+
+            
+            <label for="role">Which best describes you?</label>
+            <select id="role" name="role" required>
+                <option value="" disabled selected>Select your role</option>
+                <option value="student">Student</option>
+                <option value="teacher">Teacher/Counselor</option>
+                <option value="parent">Parent</option>
+            </select>
+
+            <label for="motivates">What motivates you to seek career counseling?</label>
+            <div class="radio-group">
+                <input type="radio" id="explore" name="motivates" value="explore">
+                <label for="explore">Explore career options</label>
+                <br>
+                <input type="radio" id="improve" name="motivates" value="improve">
+                <label for="improve">Improve job search skills</label>
+                <br>
+                <input type="radio" id="interview" name="motivates" value="interview">
+                <label for="interview">Enhance interview skills</label>
+                <br>
+                <input type="radio" id="identify" name="motivates" value="identify">
+                <label for="identify">Identify strengths and weaknesses</label>
+                <br>
+                <input type="radio" id="other" name="motivates" value="other" onclick="showOtherInput()">
+                <label for="other">Other (please specify)</label>
+            </div>
+
+            <div id="other-specify" style="display:none; margin-top: 10px;">
+                <label for="other-text">Please specify your motivation:</label>
+                <input type="text" id="other-text" name="other-text">
+            </div>
+
+            <label for="strength">If you have a strength and weakness, mention it</label>
+            <input type="text" id="strength" name="strength" placeholder="Enter your strength and weakness" required>
+
+            <label for="fav">What is your favorite subject?</label>
+            <input type="text" id="fav" name="fav" placeholder="Enter your favorite subject" required>
+
+            <label for="challenge">Which subject do you find challenging?</label>
+            <input type="text" id="challenge" name="challenge" placeholder="Enter the subject name" required>
+
+            <label for="challenge-reason">Why do you find that subject difficult?</label>
+            <input type="text" id="challenge-reason" name="challenge-reason" placeholder="Enter the reason" required>
+
+            <label for="edu">Are you planning higher education?</label>
+            <div class="radio-group">
+                <input type="radio" id="yes" name="higher-edu" value="yes">
+                <label for="yes">Yes</label>
+                <br>
+                <input type="radio" id="no" name="higher-edu" value="no">
+                <label for="no">No</label>
+            </div>
+
+            <label for="exam">Are you preparing for any competitive exam? Which one?</label>
+            <input type="text" id="exam" name="exam" placeholder="Enter exam name" required>
+
+            <label for="experience">Have you had any part-time jobs, internships, or volunteer experiences? Please detail your roles and responsibilities. What did you learn from them?</label>
+            <textarea id="experience" name="experience" rows="4" placeholder="Describe your experience" required></textarea>
+
+            <label for="skills">What skills would you like to develop or improve?</label>
+            <input type="text" id="skills" name="skills" placeholder="Enter skills" required>
+
+            <label for="motivates">Have do you plan to develop your skills and knowledge in your chosen field?</label>
+            <div class="radio-group">
+                <input type="checkbox" id="explore" name="motivates" value="Internship">
+                <label for="interenship">Internship</label>
+                <br>
+                <input type="checkbox" id="improve" name="motivates" value="Online Courses">
+                <label for="course">Online Courses</label>
+                <br>
+                <input type="checkbox" id="interview" name="motivates" value="Workshops and Seminars">
+                <label for="workshops">Workshops and Seminars</label>
+                <br>
+                <input type="checkbox" id="identify" name="motivates" value="Networking Events">
+                <label for="events">Networking Events</label>
+                <br>
+                <input type="checkbox" id="other" name="motivates" value="Self-study">
+                <label for="self-study">Self-study</label>
+            </div>
+
+            <label for="future">Where do you see yourself in the next five years, career-wise?</label>
+            <input type="text" id="future" name="future" placeholder="Enter your career goals" required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function showOtherInput() {
+            document.getElementById('other-specify').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
